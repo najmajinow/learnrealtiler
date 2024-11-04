@@ -4,7 +4,7 @@
 ![tile repair](https://raw.githubusercontent.com/najmajinow/learnrealTiler/refs/heads/main/tile%20repair.PNG)
 ![balcony tiling](https://raw.githubusercontent.com/najmajinow/learnrealTiler/refs/heads/main/balcony%20tiling.jpg)
 ![bathroom tiling 2](https://raw.githubusercontent.com/najmajinow/learnrealTiler/refs/heads/main/bathroom%20tiling%202.jpg)
-![black bathroom tiling](https://raw.githubusercontent.com/najmajinow/learnrealTiler/refs/heads/main/bathroom%20tiling%202.jpg)
+![black bathroom tiling](https://raw.githubusercontent.com/najmajinow/learnrealTiler/refs/heads/main/black%20bathroom%20tiling.jpg) 
 ![black tiling](https://raw.githubusercontent.com/najmajinow/learnrealTiler/refs/heads/main/black%20tiling.jpg)
 ![fire place tiling](https://raw.githubusercontent.com/najmajinow/learnrealTiler/refs/heads/main/fire%20place%20tiling.jpg)
 ![green bathroom tiling](https://raw.githubusercontent.com/najmajinow/learnrealTiler/refs/heads/main/green%20bathroom.jpg)
