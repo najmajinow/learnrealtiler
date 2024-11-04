@@ -38,3 +38,57 @@ contactForm.addEventListener('submit', (e) => {
     modal.style.display = 'flex';
     contactForm.reset();
 });
+
+function toggleMenu() {
+    const navbar = document.getElementById('navbar');
+    navbar.style.display = navbar.style.display === 'block' ? 'none' : 'block';
+}
+
+// Smooth scroll to section when clicking nav links
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        window.scrollTo({
+            top: targetSection.offsetTop,
+            behavior: 'smooth'
+        });
+
+        // Close menu after clicking a link on mobile
+        const navbar = document.getElementById('navbar');
+        if (window.innerWidth <= 600) {
+            navbar.style.display = 'none';
+        }
+    });
+});
+// Select the About Us section
+const aboutSection = document.querySelector('.about');
+
+// Function to change background color on hover
+aboutSection.addEventListener('mouseenter', () => {
+    aboutSection.style.backgroundColor = '#ffd54f'; // Change to a warm yellow on hover
+    aboutSection.style.color = '#000'; // Darker text for contrast
+});
+
+aboutSection.addEventListener('mouseleave', () => {
+    aboutSection.style.backgroundColor = '#e0f7fa'; // Revert to original color
+    aboutSection.style.color = '#333';
+});
+
+// Function to change color when section is in view on scroll
+window.addEventListener('scroll', () => {
+    const sectionPosition = aboutSection.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight;
+
+    // If the section is within the viewport
+    if (sectionPosition < screenPosition) {
+        aboutSection.style.backgroundColor = '#b2ebf2'; // Light blue color when in view
+        aboutSection.style.color = '#333';
+    } else {
+        aboutSection.style.backgroundColor = '#e0f7fa'; // Revert to initial color when out of view
+        aboutSection.style.color = '#333';
+    }
+});
+

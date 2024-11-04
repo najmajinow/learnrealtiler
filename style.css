@@ -3,102 +3,167 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;  
     background-color: #f4f4f4;
-    color: #333; /* Default text color */
 }
 
 /* Header Styles */
 .header {
-    background: #368a7f;
+    background: #010b16;
     color: #fff;
-    padding: 1rem 0;
+    padding: 1rem;
     text-align: center;
+    position: relative;
 }
 
 .header h1 {
     margin: 0;
 }
 
-.header .nav {
-    margin-top: 10px;
+/* Menu Icon for Mobile */
+.menu-icon {
+    font-size: 1.5em;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 20px;
 }
 
-.header .nav ul {
+/* Navigation Menu */
+.nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
 }
 
-.header .nav ul li {
+.nav ul li {
     display: inline;
-    margin: 0 15px;
 }
 
-.header .nav ul li a {
+.nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s, background-color 0.3s; /* Smooth transition */
-    padding: 5px 10px; /* Padding for better click area */
-    border-radius: 4px; /* Rounded corners */
+    padding: 5px 10px;
 }
 
-.header .nav ul li a:hover {
-    color: #c90e17; /* Change to highlight color on hover */
+.nav ul li a.active, .nav ul li a:hover {
+    background-color: #c90e17;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.header .nav ul li a.active {
-    background-color: #c90e17; /* Background color when active */
-    color: #fff; /* Text color for active link */
+/* Mobile Menu */
+@media (max-width: 600px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #010b16;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav ul {
+        flex-direction: column;
+    }
+
+    .nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
 }
 
-/* Sections */
-section {
+/* Section Styles */
+.section {
     padding: 2rem 1rem;
     margin: 0 auto;
     max-width: 800px;
 }
 
 /* Home section */
-.home { background:white;
+.home {
+    background: white;
     text-align: center;
-
 }
-
-
 
 /* About Us Section */
 .about {
-    background: #f8f9fa;
+    background: #e0f7fa; /* Updated to a light teal for a fresh look */
+    color: #333; /* Dark text for better readability */
     text-align: center;
+    padding: 2rem 1rem;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition */
 }
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
 
 /* Services Section */
 .services {
-    background:gainsboro;
+    background: #f0f0f0; /* Light background for contrast */
+    padding: 2rem 1rem;
     text-align: center;
 }
 
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+.services h2 {
+    margin-bottom: 1rem;
+    color: #010b16; /* Dark color for the heading */
 }
 
+/* Service Grid */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Service Item */
 .service-item {
-    background: white;
-    border: 1px solid black;
-    border-radius: 8px;
+    background: white; /* White background for each service item */
+    border: 1px solid #ddd; /* Light border for better visibility */
+    border-radius: 8px; /* Rounded corners */
     padding: 1rem;
-    box-shadow: 0 2px 5px white;
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+    text-align: center; /* Center align text */
+}
+
+.service-icon {
+    width: 50px; /* Adjust icon size */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 0.5rem; /* Space between icon and text */
 }
 
 .service-item:hover {
     transform: scale(1.05); /* Scale effect on hover */
-    box-shadow: 0 4px 10px white; /* Enhanced shadow on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .service-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust for smaller screens */
+    }
+}
+
 
 /* Gallery Section */
 .gallery {
@@ -118,7 +183,6 @@ section {
     height: auto;
     border-radius: 8px;
 }
-
 
 /* Contact Section */
 .contact {
@@ -144,16 +208,16 @@ section {
 
 .contact form button {
     padding: 0.5rem;
-    background: #30b89a;
+    background: #010b16;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background 0.3s; /* Smooth transition */
+    transition: background 0.3s;
 }
 
 .contact form button:hover {
-    background: #010913;
+    background: #c90e17;
 }
 
 /* Modal Styles */
@@ -193,7 +257,7 @@ section {
 footer {
     text-align: center;
     padding: 1rem 0;
-    background: #36807c;
+    background: #000;
     color: #fff;
 }
 
