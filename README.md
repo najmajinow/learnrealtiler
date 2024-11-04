@@ -11,3 +11,6 @@
 ![pavement tiling](https://raw.githubusercontent.com/najmajinow/learnrealTiler/refs/heads/main/pavement%20tiling.jpg)
 ![kitchen tiling](https://raw.githubusercontent.com/najmajinow/learnrealTiler/refs/heads/main/kitchen%20tiling.jpg)
 ![white bathroom tiling](https://raw.githubusercontent.com/najmajinow/learnrealTiler/refs/heads/main/white%20bathroom%20tiling.jpg)
+![tile 1](https://raw.githubusercontent.com/najmajinow/learnrealTiler/refs/heads/main/tile%201.jpg)
+![tile 2](https://raw.githubusercontent.com/najmajinow/learnrealTiler/refs/heads/main/tile%202.jpg)
+![tile 3](https://raw.githubusercontent.com/najmajinow/learnrealTiler/refs/heads/main/tile%203.jpg)
